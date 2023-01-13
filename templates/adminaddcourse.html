@@ -1,0 +1,40 @@
+{% extends 'adminbase.html' %}
+{% block content %}
+<html>
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <style>
+      a:link {
+          text-decoration: none;
+      }
+      .course{
+          padding: 8%;
+          margin-left:250px;
+          width: 80%;
+          height: 10%;
+      }    
+    </style>
+</head>
+<body>
+    <div class="course">
+        <h2 style="text-align:center; padding-top: 1%;">Add Course</h2>
+        <form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;" >
+            <div class="form-group">
+                <label for="courseId">Course-Id</label>
+                <input type="text" class="form-control rounded-0" name="courseid" > 
+                <label for="coursename">Course Name</label>
+                <input type="text" class="form-control " placeholder="Example:chemistry" name="coursename">
+                <label for="duration">Course Duration</label>
+                <select class="form-control" name="courseduration" style="height:fit-content;"  >
+                    <option value="00:10:00">00:10:00</option>
+                  </select>
+            </div>
+            <button type="submit" class="btn btn-primary rounded-0">Add Course Info</button>
+        </form>
+    </div>
+<br><br><br>
+{% endblock content %}
+</body>
+</html>

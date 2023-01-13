@@ -1,0 +1,63 @@
+{% extends 'adminbase.html' %}
+{% block content %}
+<html>
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <style>
+        a:link {
+            text-decoration: none;
+        }
+        .course{
+            padding: 5%;
+            margin-left:250px;
+            width: 80%;
+            height: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="course">
+        <h2 style="text-align:center; padding-top: 1%;">Add Question</h2>
+        <form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;" >
+            <div class="form-group">
+                <label for="question">Course-Id</label>
+                <!--input class="form-control form-control-sm rounded-0"-->
+                <select class="form-control form-control-sm rounded-0" name="courseid" style="height:fit-content;">
+                    {% for i in data %}
+                    <option value="{{i[0]}}">{{i[0]}}</option>
+                    {% endfor %}
+                  </select>
+                <br>
+                <label for="question">Question-Id</label>
+                <input class="form-control form-control-sm rounded-0" placeholder="Example:bq01" name="questionid"/> 
+                <br>
+                <label for="question_number">Question</label>
+                <input class="form-control form-control-sm rounded-0" placeholder="Example:The language understood by a computer with out translation is called?" name="question"/>
+                <br>
+                <label for="marks">Marks</label>
+                <input class="form-control form-control-sm rounded-0" placeholder="Example:5" name="marks">
+                <label for="option1">Option 1</label>
+                <input class="form-control form-control-sm rounded-0" placeholder="Example:Command language" name="option1"/>
+                <br>
+                <label for="option2">Option 2</label>
+                <input class="form-control form-control-sm rounded-0" placeholder="Example:High-level language "name="option2"/> 
+                <br>
+                <label for="option3">Option 3</label>
+                <input class="form-control form-control-sm rounded-0" placeholder="Example:Assembly language "name="option3"/>
+                <br>
+                <label for="option4">Option 4</label>
+                <input class="form-control form-control-sm rounded-0" placeholder="Example:Machine language " name="option4"/> 
+                <br>
+                <label for="answer">Correct Answer</label>
+                <input class="form-control form-control-sm rounded-0"name="correctanswer" />
+            </div>
+            <button type="submit" class="btn btn-success" style="border-radius:0px;">Submit Question</button>
+        </form>
+    </div>
+<br><br><br>
+{% endblock content %}
+</body>
+</html>
+

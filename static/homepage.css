@@ -1,0 +1,42 @@
+#go{
+    color: black;
+    padding: 5px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: 0px;
+
+}
+#go:hover{
+    color: white;
+}
+.bgimg1{
+    background-image: url("https://media.istockphoto.com/id/1218586447/photo/student-hands-comparing-notes-on-laptop-at-night.jpg?s=612x612&w=0&k=20&c=H4ovIyZQTC6IgdgXwTogvxgYMeMy6il1k1pJeb3MP98=");
+    background-size: cover;
+    height: 100vh;
+
+}
+.head{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+.paraline1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.paraline2{
+    color:white ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 120%;
+}
+.lead{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.navbar-brand{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
